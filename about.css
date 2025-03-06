@@ -14,6 +14,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     max-width: 600px;
     margin: auto;
+    text-align: left;
 }
 
 h1 {
@@ -34,10 +35,10 @@ span {
 
 .back-button {
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 40px;
     padding: 10px 20px;
     background: none;
-    color: white;
+    color: goldenrod;
     text-decoration: none;
     font-weight: 600;
     border-radius: 1px;
@@ -67,11 +68,81 @@ h2 {
     list-style: none;
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .interests-list li {
     font-size: 16px;
     color: #444;
-    margin: 8px 0;
+    margin: 8px 10px;
 }
 
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .about-container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .back-button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .extra-container {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .interests-list {
+        display: block;
+    }
+
+    .interests-list li {
+        font-size: 14px;
+        margin: 6px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .about-container, .extra-container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    .description {
+        font-size: 13px;
+    }
+
+    .back-button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .interests-list li {
+        font-size: 12px;
+        margin: 4px 0;
+    }
+}
